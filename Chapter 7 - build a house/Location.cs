@@ -19,16 +19,16 @@ namespace Chapter_7___build_a_house
         {
             get
             {
-                string description = $"You're standing in the {Name}." +
+                string description = $"You're standing in the {Name}.\r\n" +
                                      $"You see exits to the following places: ";
                 for (int i = 0;i<Exits.Length;i++)
                 {
-                    description += $" {Exits[i]}";
+                    description += $" {Exits[i].Name}";
                     if (i != Exits.Length - 1)
                         description += ",";
                 }
 
-                description += ".";
+                description += ".\r\n";
                 return description;
             }
         }
